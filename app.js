@@ -1,8 +1,8 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const port = 8080;
 
-// define routes here..
+app.get('/', (req, res) => res.send('My First Elastic Bean Stalk App created on CICD By Mithun S'));
 
-var server = app.listen(5000, function () {
-    console.log('Node server is running..on a CICD Pipeline created by Mithun S');
-});
+app.listen(port);
+console.log(`App running on http://localhost:${port}`);
